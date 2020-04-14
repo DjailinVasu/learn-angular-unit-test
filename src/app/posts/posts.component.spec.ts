@@ -50,7 +50,7 @@ describe('PostsComponent', () => {
       const error = 'Error message';
 
       spyOn(service, 'create').and.returnValue(throwError(error));
-
+      component.add('Post title');
       expect(component.message).toBe(error);
   })
 
